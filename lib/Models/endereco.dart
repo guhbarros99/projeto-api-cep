@@ -18,9 +18,9 @@ class Endereco {
   factory Endereco.fromJson(Map<String, dynamic> json) {
     return Endereco(
       cep: json["cep"],
-      logradouro: json["cep"],
-      bairro: json["cep"],
-      localidade: json["cep"],
+      logradouro: json["logradouro"],
+      bairro: json["bairro"],
+      localidade: json["localidade"],
       uf: json["uf"],
       estado: json["estado"],
       complemento: json["complemento"],
