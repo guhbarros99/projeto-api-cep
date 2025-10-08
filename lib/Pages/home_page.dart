@@ -92,6 +92,9 @@ class _MyHomePageState extends State<HomePage> {
               TextField(
                 onChanged: (value) {
                   if (value.isEmpty) {
+                    setState(() {
+                      endereco = null;
+                    });
                     clearControllers();
                   }
                   ;
@@ -116,43 +119,49 @@ class _MyHomePageState extends State<HomePage> {
                   labelText: "CEP",
                 ),
               ),
-              TextField(
-                controller: controllerLogradouro,
-                keyboardType: TextInputType.number,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Logradouro",
+              if (endereco?.bairro != null)
+                Column(
+                  spacing: 10,
+                  children: [
+                    TextField(
+                      controller: controllerLogradouro,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Logradouro",
+                      ),
+                    ),
+                    if (controllerComplemento.text.isNotEmpty)
+                      TextField(
+                        controller: controllerComplemento,
+                        decoration: InputDecoration(
+                          border: OutlineInputBorder(),
+                          labelText: "Complemento",
+                        ),
+                      ),
+                    TextField(
+                      controller: controllerBairro,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Bairro",
+                      ),
+                    ),
+                    TextField(
+                      controller: controllerCidade,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Cidade",
+                      ),
+                    ),
+                    TextField(
+                      controller: controllerEstado,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: "Estado",
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              if(controllerComplemento.text.isNotEmpty)
-              TextField(
-                controller: controllerComplemento,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Complemento",
-                ),
-              ),
-              TextField(
-                controller: controllerBairro,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Bairro",
-                ),
-              ),
-              TextField(
-                controller: controllerCidade,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Cidade",
-                ),
-              ),
-              TextField(
-                controller: controllerEstado,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: "Estado",
-                ),
-              ),
             ],
           ),
         ),
