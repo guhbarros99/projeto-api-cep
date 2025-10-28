@@ -70,7 +70,14 @@ class ListaUsuariosPage extends StatelessWidget {
                     ),
                     subtitle: Row(
                       children: [
-                        Column(children: [ Text(" Nome: gi${nome}"), Text(email), Text(telefone), Text(cpf) ]),
+                        Column(
+                          children: [
+                            Text(" Nome:${nome}"),
+                            Text("Email: ${email}"),
+                            Text("Telefone: ${telefone}"),
+                            Text("CPF: ${cpf}"),
+                          ],
+                        ),
                       ],
                     ),
 
