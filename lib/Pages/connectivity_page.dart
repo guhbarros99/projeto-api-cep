@@ -12,7 +12,7 @@ class _ConnectivityPageState extends State<ConnectivityPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Status de Conexão'),
+        title: Text('Status de "Conexão"'),
         titleTextStyle: TextStyle(color: Colors.lightBlue),
         animateColor: EditableText.debugDeterministicCursor,
         shadowColor: Color(0xFFFFF),
