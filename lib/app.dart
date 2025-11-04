@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_2/Pages/connectivity_page.dart';
 import 'package:projeto_2/Pages/form_cadastro_usuario_page.dart';
 import 'package:projeto_2/Pages/home_page.dart';
 import 'package:projeto_2/Pages/ListaUsuariosPage.dart';
@@ -14,7 +15,7 @@ class VIACEPAPI extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home:  MapaPage(),
+      home:  ConnectivityPage(),
     );
   }
 }
