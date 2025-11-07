@@ -166,6 +166,7 @@ Endereco? _endereco;
                   child: ListTile(
                     title: Text('${_endereco!.logradouro}, ${_endereco!.bairro}'),
                     subtitle: Text('${_endereco!.localidade} - ${_endereco!.uf}\nCEP: ${_endereco!.cep}'),
+
                   ),
                 ), 
                 const SizedBox(height: 16),
@@ -187,7 +188,7 @@ Endereco? _endereco;
                             leading: const Icon(Icons.location_on_outlined),
                             title: Text('${e.logradouro}, ${e.bairro}'),
                             subtitle:
-                                Text('${e.localidade} - ${e.uf} | CEP: ${e.cep}'),
+                                Text('${e.localidade} | CEP: ${e.cep}'),
                             onTap: () {
                               _cepController.text = e.cep ?? "";
                               _buscarEndereco();

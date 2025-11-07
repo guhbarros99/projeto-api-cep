@@ -19,6 +19,7 @@ class _MyHomePageState extends State<HomePage> {
   TextEditingController controllerBairro = TextEditingController();
   TextEditingController controllerCidade = TextEditingController();
   TextEditingController controllerEstado = TextEditingController();
+  TextEditingController controllerUf = TextEditingController();
   Endereco? endereco; // Variavel pode receber null "?"
   bool isLoading = false;
 
@@ -67,6 +68,7 @@ class _MyHomePageState extends State<HomePage> {
     controllerBairro.text = endereco.bairro!;
     controllerCidade.text = endereco.localidade!;
     controllerEstado.text = endereco.estado!;
+    controllerUf.text = endereco.uf!;
   }
 
   void clearControllers() {
@@ -75,6 +77,7 @@ class _MyHomePageState extends State<HomePage> {
     controllerBairro.clear();
     controllerCidade.clear();
     controllerEstado.clear();
+    controllerUf.clear();
   }
 
   @override
